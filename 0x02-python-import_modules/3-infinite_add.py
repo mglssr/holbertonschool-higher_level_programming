@@ -10,6 +10,6 @@ if __name__ == "__main__":
     elif argc <= 1:
         aux = 0
     else:
-        for i in range (1, argc):
+        for i in range(1, argc):
             aux += int(sys.argv[i])
     print(f"{aux}")
