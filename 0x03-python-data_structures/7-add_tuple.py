@@ -4,8 +4,8 @@ def add_tuple(tuple_a=(), tuple_b=()):
     len2 = len(tuple_b)
 
     while len1 < 2:
-       tuple_a = tuple_a + (0,)
-       len1 += 1
+        tuple_a = tuple_a + (0,)
+        len1 += 1
     while len2 < 2:
         tuple_b = tuple_b + (0,)
         len2 += 1
