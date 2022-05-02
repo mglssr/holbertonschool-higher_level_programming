@@ -6,6 +6,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
         return tuple_a
     elif not tuple_a and not tuple_b:
         tuple_3 = (0, 0)
+        return tuple_3
     elif len(tuple_a) < 2 and len(tuple_b) < 2:
         tuple_3 = (tuple_a[0] + tuple_b[0], )
         return tuple_3
