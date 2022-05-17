@@ -8,4 +8,4 @@ class Square:
         """ __init__ method runs as soon as an objet of a class is created.
         The method is useful to do any initialization (or passing initial
         values to your object) you want to do with your object."""
-        self.size = size
+        self.__size = size
