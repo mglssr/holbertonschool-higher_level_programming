@@ -4,7 +4,8 @@
 
 class Square:
     """ define the class 'Square'"""
-    def __init__(self, size=0):
+    def __init__(self, size):
         """ __init__ method runs as soon as an objet of a class is created.
         The method is useful to do any initialization (or passing initial
         values to your object) you want to do with your object."""
+        self.size = size
