@@ -12,9 +12,9 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
         self.__width = width
-        if type(width):
+        if type(width) is not int:
             raise TypeError("width must be an integer")
-        is width < 0:
+        if width < 0:
             raise ValueError("width must be >= 0")
 
     @property
