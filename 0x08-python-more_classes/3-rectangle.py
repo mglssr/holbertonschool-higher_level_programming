@@ -10,7 +10,7 @@ class Rectangle:
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if height < 0:
-            raise ValueError("height must be >= 0") 
+            raise ValueError("height must be >= 0")
         self.__width = width
         if type(width) is not int:
             raise TypeError("width must be an integer")
@@ -53,7 +53,7 @@ class Rectangle:
     def __str__(self):
         out = ""
         if self.__width == 0 or self.__height == 0:
-            return ""
+            return out
         else:
             for i in range(self.__height):
                 for j in range(self.__width):
