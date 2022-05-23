@@ -1,0 +1,30 @@
+=======================================================
+  Task 3 - prints My name is <first name> <last name>
+=======================================================
+
+>>> print_square = __import__('4-print_square').print_square
+
+>>> print_square(-2)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+>>> print_square("size")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+>>> print_square(size)
+Traceback (most recent call last):
+NameError: name 'size' is not defined
+
+>>> print_square(0)
+
+
+>>> print_square(True)
+#
