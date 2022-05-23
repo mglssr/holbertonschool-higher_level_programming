@@ -1,0 +1,41 @@
+==============================================
+          Task 0 - add 2 integers
+==============================================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(0, 0)
+0
+
+>>> add_integer(10, "")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(6, 9, 102)
+Traceback (most recent call last):
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+>>> add_integer( ,5)
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> add_integer(, 10)
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> add_integer(,12)
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> add_integer(-10, 2)
+-8
+
+>>> add_integer(5)
+103
+
+>>> add_integer(57.4, 3)
+60
+
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
