@@ -1,0 +1,38 @@
+===================================================================================================
+  Task 4 - function that prints a text with 2 new lines after each of these characters: ., ? and :
+===================================================================================================
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("""Mira ese punto. Eso es aquí. Eso es nuestro hogar. Eso somos nosotros. Ahí ha vivido todo aquel: de quien hayas oído hablar alguna vez, todos los seres humanos que han existido. La suma de todas nuestras alegrías y: sufrimientos, miles de religiones seguras de sí mismas, ideologías y doctrinas económicas?, cada cazador y, recolecto, cada santo y cada pecador en la historia de nuestra especie vivió ahí: en una mota de polvo suspendida en: un rayo de sol.""")
+Mira ese punto.
+<BLANKLINE>
+Eso es aquí.
+<BLANKLINE>
+Eso es nuestro hogar.
+<BLANKLINE>
+Eso somos nosotros.
+<BLANKLINE>
+Ahí ha vivido todo aquel:
+<BLANKLINE>
+de quien hayas oído hablar alguna vez, todos los seres humanos que han existido.
+<BLANKLINE>
+La suma de todas nuestras alegrías y:
+<BLANKLINE>
+sufrimientos, miles de religiones seguras de sí mismas, ideologías y doctrinas económicas?, cada cazador y, recolecto, cada santo y cada pecador en la historia de nuestra especie vivió ahí:
+<BLANKLINE>
+en una mota de polvo suspendida en:
+<BLANKLINE>
+un rayo de sol.
+
+>>> text_indentation(9)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("""ahre?""", 90)
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 2 were given
