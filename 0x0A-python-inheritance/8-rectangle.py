@@ -17,6 +17,7 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
         return value
 
+
 class Rectangle(BaseGeometry):
     """creating class"""
 
