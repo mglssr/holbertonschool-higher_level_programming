@@ -4,6 +4,7 @@
 
 class MyInt(int):
     """MyInt class that inherits from int class"""
+
     def __eq__(self, other):
         return self.real != other.real
 
