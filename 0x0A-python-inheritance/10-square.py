@@ -17,8 +17,8 @@ class BaseGeometry:
 class Rectangle(BaseGeometry):
     """creates a inherited class from BaseGeometry"""
     def __init__(self, width, height):
-        super().integer_validator('width', width)
-        super().integer_validator('height', height)
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.__width = width
         self.__height = height
 
@@ -32,9 +32,8 @@ class Rectangle(BaseGeometry):
 class Square(Rectangle):
     """creates a inherited class from Rectangle"""
     def __init__(self, size):
-        super().__init__(size, size)
-        super().integer_validator('size', size)
-        self.__size = size
+        self.__size = super().integer_validator("size", size)
+        super().__init__(self.__size, self.__size)
 
     def area(self):
         return self.__size * self.__size
