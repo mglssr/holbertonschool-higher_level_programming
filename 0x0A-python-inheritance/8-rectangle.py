@@ -17,13 +17,10 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
         return value
 
-
 class Rectangle(BaseGeometry):
-    """creates a inherited class from BaseGeometry"""
+    """creating class"""
 
     def __init__(self, width, height):
         """initializing"""
-        self.integer_validator('width', width)
-        self.integer_validator('height', height)
-        self.__width = width
-        self.__height = height
+        self.__width = self.integer_validator("width", width)
+        self.__height = self.integer_validator("height", height)
