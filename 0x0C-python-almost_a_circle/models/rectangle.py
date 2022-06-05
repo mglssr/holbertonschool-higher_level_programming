@@ -61,3 +61,18 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
+
+    def area(self):
+        return self.__height * self.__width
+
+    def display(self):
+        out = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                out += str('#')
+            out += "\n"
+        print(out[:-1])
+
+    def __str__(self):
+        return(f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
+ - {self.__width}/{self.__height}")
