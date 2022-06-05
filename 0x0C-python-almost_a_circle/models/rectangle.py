@@ -67,7 +67,9 @@ class Rectangle(Base):
 
     def display(self):
         out = ""
+        out += "\n" * self.__y
         for i in range(self.__height):
+            out += str(" " * self.__x)
             for j in range(self.__width):
                 out += str('#')
             out += "\n"
@@ -76,3 +78,6 @@ class Rectangle(Base):
     def __str__(self):
         return(f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
  - {self.__width}/{self.__height}")
+
+    def update(self, *args):
+        
