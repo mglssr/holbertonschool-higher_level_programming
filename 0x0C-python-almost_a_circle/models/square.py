@@ -4,6 +4,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """Write the class Square that inherits from Rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
@@ -15,14 +16,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """generic comment"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """generic comment"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """generic comment"""
         if args is not None and len(args) != 0:
             i = 1
             for arg in args:
@@ -49,4 +53,5 @@ class Square(Rectangle):
                         self.y = value
 
     def to_dictionary(self):
+        """generic comment"""
         return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
