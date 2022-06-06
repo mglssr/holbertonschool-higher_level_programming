@@ -16,12 +16,34 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """generic comment"""
         import json
         if list_dictionaries is None:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
-
+    
+    @classmethod
     def save_to_file(cls, list_objs):
-        with open('cls' + '.json', "w", encoding="utf-8") as _file:
-            _file.write(Base.to_json_string(list_objs))
+        """generic comment"""
+        if list_objs in []:
+            with open(cls.__name + '.json', "w") as _file:
+                _file.write(cls.to_json_string(None))
+        else:
+            with open(cls.__name__ + '.json', "w") as _file:
+                _file.write(cls.to_json_string([obj.to_dictionary() for obj\
+                in list_objs]))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """generic comment"""
+        import json
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """generic comment"""
+        
