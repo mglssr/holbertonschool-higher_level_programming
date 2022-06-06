@@ -52,3 +52,13 @@ class Base:
             dummy = cls(1, 1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """generic comment"""
+        try:
+            with open(cls.__name__ + ".json", "r") as _file:
+                return [cls.create(**dic) for dic in
+                        cls.from_json_string(_file.read())]
+        except FileNotFoundError:
+            return []
