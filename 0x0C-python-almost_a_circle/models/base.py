@@ -26,9 +26,9 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """generic comment"""
-        if list_objs is [] or len(list_objs) == 0:
+        if list_objs is []:
             with open(cls.__name__ + ".json", "w") as _file:
-                _file.write(cls.to_json_string(None))
+                _file.write([])
         else:
             with open(cls.__name__ + ".json", "w") as _file:
                 _file.write(cls.to_json_string([obj.to_dictionary()
