@@ -22,7 +22,7 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         """generic comment"""
@@ -31,8 +31,8 @@ class Base:
                 _file.write(cls.to_json_string(None))
         else:
             with open(cls.__name__ + '.json', "w") as _file:
-                _file.write(cls.to_json_string([obj.to_dictionary() for obj\
-                in list_objs]))
+                _file.write(cls.to_json_string([obj.to_dictionary()
+                                                for obj in list_objs]))
 
     @staticmethod
     def from_json_string(json_string):
@@ -42,8 +42,3 @@ class Base:
             return []
         else:
             return json.loads(json_string)
-
-    @classmethod
-    def create(cls, **dictionary):
-        """generic comment"""
-        
