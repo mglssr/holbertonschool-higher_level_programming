@@ -15,7 +15,7 @@ if __name__ == "__main__":
                          passwd=passwd, db=db)
     cur = db.cursor()
     query = "SELECT cities.name FROM cities WHERE state_id\
-            IN(SELECT id FROM states WHERE name = %s)"
+            IN(SELECT id FROM states WHERE name = %s) ORDER BY ID ASC"
     cur.execute(query, (state,))
     rows = cur.fetchall()
     for row in rows[:-1]:
