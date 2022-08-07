@@ -14,7 +14,8 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", user=user,
                          passwd=passwd, db=db)
     cur = db.cursor()
-    query = ("SELECT * FROM states WHERE name = '%s' ORDER BY id ASC" % (name))
+    query = ("SELECT * FROM states WHERE name = '{}' ORDER BY\
+             id ASC".format(name))
     cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
