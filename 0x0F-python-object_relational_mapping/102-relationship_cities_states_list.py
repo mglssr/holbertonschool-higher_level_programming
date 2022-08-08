@@ -19,8 +19,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    cities = session.query(State.name, City.id, City.name).join(City).o\
-        rder_by(City.id).all()
+    cities = session.query(State.name, City.id, City.name).join(
+            City).order_by(City.id).all()
     for city in cities:
         print(f"{city[1]}: {city[2]} -> {city[0]}")
     session.close()
