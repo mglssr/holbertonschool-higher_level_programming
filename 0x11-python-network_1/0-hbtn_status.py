@@ -5,7 +5,7 @@ https://intranet.hbtn.io/status"""
 
 if __name__ == "__main__":
     from urllib import request
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+    with request.urlopen('https://intranet.hbtn.io/status') as response:
         body = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(body)))
