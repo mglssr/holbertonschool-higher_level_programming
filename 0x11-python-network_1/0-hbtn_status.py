@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Write a Python script that fetches
-https://intranet.hbtn.io/status"""
+https://intranet.hbtn.io/statusi"""
 
 
 if __name__ == "__main__":
