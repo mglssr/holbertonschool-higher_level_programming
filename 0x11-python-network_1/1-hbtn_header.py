@@ -7,6 +7,6 @@ found in the header of the response."""
 if __name__ == "__main__":
     from urllib import request
     import sys
-    resp = request.urlopen(f"{sys.argv[1]}")
+    with request.urlopen("{}".format(sys.argv[1])) as resp:
+        print(resp.headers['X-Request-Id'])
     
-    print(resp.get['X-Request-Id'])
