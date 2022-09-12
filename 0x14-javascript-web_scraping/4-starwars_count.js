@@ -11,7 +11,7 @@ axios.get(argv[2])
     while (i < ch.length) {
       let p = 0;
       while (p < ch[i].length) {
-        if (ch[i][p].includes("18")) {
+        if (ch[i][p].includes('18')) {
           count++;
         }
         p++;
