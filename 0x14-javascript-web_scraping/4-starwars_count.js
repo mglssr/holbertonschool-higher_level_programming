@@ -1,7 +1,6 @@
 #!/usr/bin/node
 const axios = require('axios').default;
 const argv = process.argv;
-const url = 'https://swapi-api.hbtn.io/api/people/18/';
 axios.get(argv[2])
   .then(function (response) {
     const results = response.data.results;
@@ -12,7 +11,7 @@ axios.get(argv[2])
     while (i < ch.length) {
       let p = 0;
       while (p < ch[i].length) {
-        if (ch[i][p] === url) {
+        if (ch[i][p].includes("18")) {
           count++;
         }
         p++;
