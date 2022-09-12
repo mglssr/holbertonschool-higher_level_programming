@@ -20,4 +20,7 @@ axios.get(argv[2])
       i++;
     }
     console.log(count);
+  })
+  .catch(function (error) {
+    console.log('code: ' + error.response.status);
   });
