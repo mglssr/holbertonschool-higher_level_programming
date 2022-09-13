@@ -1,18 +1,23 @@
 #!/usr/bin/node
-const axios = require('axios').default;
 const argv = process.argv;
-var dict = {};
-let users = 0
-axios.get("https://jsonplaceholder.typicode.com/users")
-  .then(function (resp) {
-    users = resp.data.length
-    let i = 1
-    while (i <= users){
-        axios.get(argv[2] + "?userId=" + i + "&completed=true")
-          .then(function(response) {
-            console.log(response.data.length)
-        });
-        i++;
+const axios = require('axios').default;
+
+axios.get(argv[2])
+.then(function (response) {
+  const data = response.data;
+  const dict = {};
+  let i = 0
+  while (i < data.length) {
+    if (data[i].completed === true) {
+      if (dict[data[i].userId] !== undefined) {
+        dict[data[i].userId] = dict[data[i].userId] += 1;
+      } else {
+        dict[data[i].userId] = 1;
+      }
     }
-    console.log(dict)
+    i++;
+  }
+  console.log(dict);
+}).catch(function (error) {
+  console.log(`code: ${error.response.status}`);
 });
